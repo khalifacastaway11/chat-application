@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my chat app by - Ahmed Mohamed Khalifa</title>
+</head>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #logo {
+        height: 70px;
+    }
+
+    hr {
+        margin: 0;
+        padding: 0;
+        border-color: rgb(238, 238, 238, 0.342);
+    }
+
+    .container {
+        width: 50%;
+        height: 500px;
+        display: block;
+        /*background-color: aquamarine;*/
+        border-radius: 20px;
+        border: 0.01mm solid rgb(185, 185, 185);
+        margin: auto;
+
+    }
+
+    .myheading {
+        background-color: aquamarine;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 800;
+        font-size: 20px;
+
+
+    }
+
+    .mymargin {
+        margin: 30px 0px;
+
+    }
+
+    .message {
+        width: 220px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 10px;
+        border-radius: 5px;
+        padding: 5px;
+        border: 1px solid black;
+
+        margin: 1rem auto;
+    }
+
+    .right {
+        float: right;
+        clear: both;
+        box-shadow: 1px 1px 8px 1px #888888;
+        margin-right: 1rem;
+    }
+
+    .left {
+        float: left;
+        box-shadow: 1px 1px 8px 1px #11d7a3;
+        clear: both;
+        margin-left: 1rem;
+
+    }
+
+    .center {
+        display: block;
+        margin: auto;
+        clear: both;
+        background-color: aquamarine;
+        color: rgb(20, 20, 20);
+        text-align: center;
+        font-weight: 700;
+    }
+
+    #messagebox {
+        background-color: white;
+        height: 100%;
+        overflow: auto;
+        padding-top: 10px;
+    }
+
+    #messagesendbox,
+    form {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+    }
+
+    #send_msg {
+        width: 100%;
+        padding: 5px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 800;
+        font-size: 18px;
+    }
+
+    #sendbtn {
+        width: 80px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        background-color: #11d7a3;
+        font-size: 18px;
+        padding: 10px;
+        font-weight: 800;
+        border: none;
+    }
+
+    @media(max-width:730px) {
+        .container {
+            width: 95%;
+            height: 600px;
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <img src="./images/logo.png" alt="" srcset="" id="logo">
+    </nav>
+    <hr>
+    <div class="mymargin"></div>
+    <div class="container">
+        <div class="myheading">My Chat App</div>
+        <div id="messagebox">
+        </div>
+        <div class="messagesendbox">
+            <form action="#" id="sendcont">
+                <input type="text" name="send_msg" id="send_msg">
+                <button id="sendbtn">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script  src="/socket.io/socket.io.js"></script>
+<script  src="/Client.js" >
+</script>
+<script>
+    var element = document.getElementById('messagebox');
+    element.scrollTop = element.scrollHeight
+</script>
+
+</html>
